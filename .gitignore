@@ -1,0 +1,46 @@
+# ========================
+# 📦 Node.js & pnpm 依赖
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========================
+# 🌐 Next.js & 前端构建产物
+# ========================
+.next/
+out/
+build/
+dist/
+.swc/
+
+# ========================
+# 📜 Foundry 智能合约产物
+# ========================
+# 注意：我们不提交编译后的 ABI，团队成员 Clone 后需要手动跑 pnpm contracts:compile
+packages/contracts/out/
+packages/contracts/cache/
+packages/contracts/broadcast/
+packages/contracts/.cache/
+
+# ========================
+# 🔐 环境变量与机密信息 (最高机密，绝对不能上链/提交)
+# ========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+# 允许提交 example 文件作为模板给团队成员看
+!.env.example 
+
+# ========================
+# 💻 操作系统与编辑器缓存
+# ========================
+.DS_Store
+*.swp
+.idea/
+.vscode/
