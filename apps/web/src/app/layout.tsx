@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Web3Provider } from "@/providers/web3-provider";
+
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={"h-full antialiased"}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body>
+        <Web3Provider>{children}</Web3Provider>
+      </body>
     </html>
   );
 }
