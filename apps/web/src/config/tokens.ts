@@ -85,9 +85,13 @@ export function getTokensByChainId(chainId: number): Token[] {
 }
 
 export function getErc20TokensByChainId(chainId: number) {
-  return supportedTokens[chainId].filter((token) => token.type === "erc20");
+  return (supportedTokens[chainId] ?? []).filter(
+    (token) => token.type === "erc20",
+  );
 }
 
 export function getNativeTokenByChainId(chainId: number) {
-  return supportedTokens[chainId].find((token) => token.type === "native");
+  return (supportedTokens[chainId] ?? []).find(
+    (token) => token.type === "native",
+  );
 }

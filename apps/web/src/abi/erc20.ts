@@ -29,7 +29,7 @@ export const erc20Abi = [
   // Decimals
   {
     type: "function",
-    name: "name",
+    name: "decimals",
     stateMutability: "view",
     inputs: [],
     outputs: [{ name: "", type: "uint8" }],
